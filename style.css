@@ -21,6 +21,9 @@ body {
 img {
   width: 100%;
 }
+.bi-x {
+  font-size: 2rem;
+}
 /* === left nav === */
 .left-nav {
   position: fixed;
@@ -69,6 +72,9 @@ nav {
 .content {
   margin: 0 10%;
   padding: 1em 0;
+}
+.social-links {
+  display: none;
 }
 .intro {
   height: 100vh;
@@ -146,6 +152,30 @@ nav {
     width: 100%;
     display: none;
   }
+  .right-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1em;
+    position: fixed;
+    top: 3.8em;
+    right: -100%;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 12, 33, 0.7);
+    backdrop-filter: blur(4.5px);
+    writing-mode: horizontal-tb;
+    transition: 1s;
+    z-index: 9999;
+  }
+  .social-links {
+    margin-top: 4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8em;
+    color: var(--green);
+  }
   .content {
     margin: 0;
     padding: 1em;
@@ -155,9 +185,14 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     background: var(--white);
     box-shadow: hsl(0, 0%, 80%) 0 0 8px;
     padding: 1em;
+    z-index: 9999;
   }
   .bi-list {
     font-size: 2rem;
@@ -172,7 +207,7 @@ nav {
     display: none;
   }
   .intro {
-    height: 75vh;
+    height: 100vh;
     margin-top: 2em;
   }
 }
@@ -255,19 +290,18 @@ nav {
   }
 }
 /* === Contact === */
-.contact {
-  text-align: center;
-}
 .contact .hire-me {
   display: inline-block;
   margin-top: 1em;
 }
 .contact-details {
+  display: flex;
+  gap: 1em;
+  flex-direction: column;
   padding-bottom: 2em;
 }
-
-@media (max-width: 768px) {
-  .contact {
-    text-align: center!important;
-  }
+.contact-details span {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
 }
