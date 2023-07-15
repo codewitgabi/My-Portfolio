@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Kanit", sans-serif;
+}
+:root {
+  --gray: #d5d5d5;
+  --blue: #0554f2;
+  --black: #151515;
+  --white: #ffffff;
+  --text-black: #353940;
+  --green: #71b390;
+  --glass: #f2f2f2;
+}
+body {
+  color: var(--text-black);
+}
+img {
+  width: 100%;
+}
+/* === left nav === */
+.left-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  height: 100vh;
+  background: #fafafa;
+  box-shadow: hsl(0, 0%, 90%) 0 0 2px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  gap: 2em;
+  padding: 1.5em;
+}
+.left-nav .bi {
+  font-size: 2rem;
+}
+
+/* === Right Nav === */
+.right-nav {
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 100vh;
+  padding: 1.5em;
+  background: #fafafa;
+  box-shadow: hsl(0, 0%, 90%) 0 0 2px;
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+  writing-mode: vertical-lr;
+  overflow: auto;
+  font-size: 1.2rem;
+}
+.right-nav a {
+  color: var(--green);
+  font-weight: 700;
+}
+nav {
+  display: none;
+}
+/* === Content === */
+.content {
+  margin: 0 10%;
+  padding: 1em 0;
+}
+.intro {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.intro img {
+  height: 200px;
+  width: 200px;
+  border-radius: 100px;
+  object-fit: cover;
+  display: inline-block;
+  margin-bottom: 2em;
+}
+.big {
+  font-size: 1.5rem;
+}
+.intro div h1 {
+  font-size: 2rem;
+}
+.blue {
+  color: var(--blue);
+  font-weight: 600;
+}
+.green {
+  color: var(--green);
+  font-weight: 600;
+}
+.mt-1 {
+  margin-top: 1em;
+}
+.mt-3 {
+  margin-top: 5em;
+}
+.t-1 {
+  font-size: 1rem;
+}
+.t-12 {
+  font-size: 1.2rem;
+}
+.intro-buttons {
+  margin-top: 3em;
+}
+.resume-link {
+  background: var(--black);
+  color: var(--white);
+  padding: 10px 35px;
+  border-radius: 3px;
+  margin-right: 10px;
+  text-transform: uppercase;
+  transition: 1s;
+}
+.resume-link:hover {
+  background: var(--glass);
+  color: var(--black);
+}
+.hire-me {
+  padding: 10px 35px;
+  border: 1px solid var(--text-black);
+  border-radius: 3px;
+  color: var(--text-black);
+  margin-right: 5px;
+  text-transform: uppercase;
+  transition: 1s;
+}
+.hire-me:hover {
+  background: var(--black);
+  color: var(--white);
+}
+
+@media (max-width: 768px) {
+  .left-nav, .right-nav {
+    position: relative;
+    width: 100%;
+    display: none;
+  }
+  .content {
+    margin: 0;
+    padding: 1em;
+    padding-top: 0;
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--white);
+    box-shadow: hsl(0, 0%, 80%) 0 0 8px;
+    padding: 1em;
+  }
+  .bi-list {
+    font-size: 2rem;
+  }
+  nav img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    object-fit: cover;
+  }
+  .intro img {
+    display: none;
+  }
+  .intro {
+    height: 75vh;
+    margin-top: 2em;
+  }
+}
+
+/* === About Me === */
+.heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  border: 0.5px solid var(--black);
+  width: max-content;
+  padding: 10px 60px;
+  text-transform: uppercase;
+  margin-bottom: 2em;
+}
+.about p {
+  margin-top: 1em;
+  font-size: 1.2rem;
+}
+.stack {
+  display: flex;
+  gap: 1em;
+}
+.stack-box {
+  background: var(--black);
+  padding: 10px;
+  color: var(--glass);
+  font-size: 0.8rem;
+}
+
+@media (max-width: 768px) {
+  .about {
+    margin-top: 5em;
+  }
+}
+/* === My Experience === */
+.list {
+  background: var(--white);
+  box-shadow: hsl(0, 0%, 90%) 0 0 5px;
+  padding: 1em;
+  margin-bottom: 1em;
+}
+.flex-sb {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.experience-desc {
+  margin-top: 1em;
+  font-size: 0.9rem;
+}
+
+/* === My Projects === */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 1em;
+  row-gap: 1em;
+}
+.project-box {
+  background: var(--white);
+  box-shadow: hsl(0, 0%, 80%) 0 0 10px;
+  padding: 1em;
+}
+.project-desc {
+  display: inline-block;
+}
+.cool-text {
+  background: var(--black);
+  color: var(--white);
+  padding: 5px 15px;
+  border-radius: 3px;
+  display: inline-block;
+  margin: 3px;
+  margin-left: 0;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* === Contact === */
+.contact {
+  text-align: center;
+}
+.contact .hire-me {
+  display: inline-block;
+  margin-top: 1em;
+}
+.contact-details {
+  padding-bottom: 2em;
+}
+
+@media (max-width: 768px) {
+  .contact {
+    text-align: center!important;
+  }
+}
