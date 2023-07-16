@@ -150,6 +150,12 @@ nav {
   color: var(--white);
 }
 
+@media (max-width: 946px) {
+  .content {
+    margin: 0 12%;
+  }
+}
+
 @media (max-width: 768px) {
   .left-nav, .right-nav {
     position: relative;
@@ -216,6 +222,23 @@ nav {
   }
 }
 
+@media (max-width: 340px) {
+  .intro-buttons {
+    font-size: 0.6rem;
+  }
+}
+
+@media (max-width: 285px) {
+  .intro-buttons {
+    display: flex;
+    gap: 1em;
+    flex-direction: column;
+  }
+  .intro-buttons a {
+    width: 100%;
+  }
+}
+
 /* === About Me === */
 .heading {
   font-size: 1.5rem;
@@ -225,6 +248,18 @@ nav {
   padding: 10px 60px;
   text-transform: uppercase;
   margin-bottom: 2em;
+}
+@media (max-width: 768px) {
+  .heading {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 360px) {
+  .heading {
+    width: 100%;
+    font-size: 0.6rem;
+    text-align: center;
+  }
 }
 .about p {
   margin-top: 1em;
