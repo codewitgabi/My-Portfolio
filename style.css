@@ -21,6 +21,10 @@ body {
 img {
   width: 100%;
 }
+a {
+  color: var(--green);
+  font-weight: 600;
+}
 .bi-x {
   font-size: 2rem;
 }
@@ -227,14 +231,23 @@ nav {
   font-size: 1.2rem;
 }
 .stack {
+  margin-top: 2em;
   display: flex;
-  gap: 1em;
+  gap: 0.5em;
+  flex-wrap: wrap;
 }
 .stack-box {
   background: var(--black);
   padding: 10px;
   color: var(--glass);
   font-size: 0.8rem;
+  border-radius: 3px;
+  min-width: 105px;
+  text-align: center;
+  width: max-content;
+}
+.stack-box i {
+  font-size: 2.5rem;
 }
 
 @media (max-width: 768px) {
@@ -271,6 +284,12 @@ nav {
   box-shadow: hsl(0, 0%, 80%) 0 0 10px;
   padding: 1em;
 }
+.project-box i {
+  font-size: 1.7rem;
+}
+.project-name {
+  font-size: 1.8rem;
+}
 .project-desc {
   display: inline-block;
 }
@@ -299,9 +318,13 @@ nav {
   gap: 1em;
   flex-direction: column;
   padding-bottom: 2em;
+  margin-top: 3em;
 }
 .contact-details span {
   display: flex;
   align-items: center;
   gap: 0.5em;
+}
+.contact-details i {
+  font-size: 1.5rem;
 }
