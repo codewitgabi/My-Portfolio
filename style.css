@@ -168,11 +168,11 @@ nav {
     justify-content: flex-start;
     gap: 1em;
     position: fixed;
-    top: 3.8em;
+    top: 4em;
     right: -100%;
     bottom: 0;
     width: 100%;
-    background: rgba(0, 12, 33, 0.7);
+    background: rgba(255, 255, 255, .2);
     backdrop-filter: blur(4.5px);
     writing-mode: horizontal-tb;
     transition: 1s;
@@ -200,7 +200,7 @@ nav {
     left: 0;
     right: 0;
     background: var(--white);
-    box-shadow: hsl(0, 0%, 80%) 0 0 8px;
+    /*box-shadow: hsl(0, 0%, 80%) 0 0 8px;*/
     padding: 1em;
     z-index: 9999;
   }
